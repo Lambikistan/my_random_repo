@@ -30,9 +30,15 @@ set wildignore=*.doc,*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.img,*.xls,*.xl
 
 """ PLUGINS {{{
 call plug#begin('~/.vim/plugged')
+  " Just awesome stuff
   Plug 'preservim/nerdtree'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  " Language support
   Plug 'rust-lang/rust.vim'
+  " Tags
+  Plug 'xolox/vim-misc'
+  Plug 'xolox/vim-easytags'
+  Plug 'preservim/tagbar'
 call plug#end()
 """ }}}
 
@@ -60,6 +66,9 @@ nnoremap <c-l> <c-w>l
 
 " NERDTree remapping
 nnoremap <F3> :NERDTreeToggle<cr>
+
+" Tagbar remapping
+nnoremap <F8> :TagbarToggle<cr>
 """ }}}
 
 """ VIMSCRIPT {{{
