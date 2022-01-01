@@ -1,0 +1,6 @@
+# ignore rust target files
+target/
+Cargo.lock
+
+# Ignore binary files
+*.jpg
